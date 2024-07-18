@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultArticle3 = document.getElementById('resultArticle');
     const generalInformation3 = document.getElementById('generalInformation');
     const bmiValueElement = document.getElementById('bmiValue');
-    const footer = document.getElementById('footer');
     const bmiCategoryElement = document.getElementById('bmiCategory');
 
     bmiForm.addEventListener('submit', function(event) {
@@ -47,6 +46,5 @@ document.addEventListener('DOMContentLoaded', () => {
         bmiCategoryElement.textContent = category;
 
         resultSection.style.display = 'block';
-        footer.style.display = 'block';
     });
 });

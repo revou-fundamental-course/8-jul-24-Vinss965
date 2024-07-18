@@ -24,7 +24,7 @@ main {
 }
 
 .submit {
-    background-color: rgb(173, 9, 227);
+    background-color: rgba(203, 47, 255, 0.868);
 }
 
 .reset {
@@ -37,13 +37,13 @@ input[type=number] {
     margin: 8px 0;
     margin-bottom: 30px;
     box-sizing: border-box;
-    border: 3px solid #ccc;
+    border: 3px solid #ccccccb8;
     transition: border 0.5s;
     outline: none;
 }
 
 input[type=number]:focus {
-    border: 3px solid #555;
+    border: 3px solid #1c1c1c;
 }
 
 .result-section,
@@ -79,5 +79,5 @@ input[type=radio] {
 
 .footer {
     text-align: center;
-    align-items: center; /* jika menggunakan display flex*/
+    align-items: center; 
 }
