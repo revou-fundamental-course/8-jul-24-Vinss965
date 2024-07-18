@@ -1,83 +1,77 @@
-.main-title {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
     text-align: center;
 }
 
-main {
-    display: flex;
-    justify-content: space-around;
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.main-content {
-    flex: 1;
-    padding: 12px;
-}
-
-.jk {
-    font-size: 16px;
+label {
+    display: block;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
-.button {
-    height: 32px;
-    border-radius: 8px;
-    border: 0;
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.submit {
-    background-color: rgba(203, 47, 255, 0.868);
-}
-
-.reset {
-    border: 0;
-}
-
-input[type=number] {
+button {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-    border: 3px solid #ccccccb8;
-    transition: border 0.5s;
-    outline: none;
+    padding: 10px;
+    background-color: #cb6ed7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-input[type=number]:focus {
-    border: 3px solid #1c1c1c;
+button:hover {
+    background-color: #bc61ca;
 }
 
-.result-section,
-.general-information {
-    text-align: center;
-    background-color: aliceblue;
-    border-radius: 8px;
-    padding: 12px;
-}
-
-.jk {
-    padding-bottom: 7px;
-}
-
-input[type=radio] {
-    margin-bottom: 40px;
-}
-
-.main-article {
-    margin-top: 30px;
-}
-
-.main-form {
-    background-color: aliceblue;
+#result {
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.bacaan,
-.result-article {
-    text-align: justify;
-    padding: 12px;
+#bmiValue {
+    font-weight: bold;
+    font-size: 24px;
 }
 
-.footer {
-    text-align: center;
-    align-items: center; 
+#bmiCategory {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#tambahan {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

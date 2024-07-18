@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const bmiForm = document.getElementById('bmiForm');
     const resultSection = document.getElementById('result');
-    const resultArticle1 = document.getElementById('resultArticle2');
-    const generalInformation1 = document.getElementById('generalInformation2');
-    const resultArticle2 = document.getElementById('resultArticle1');
-    const generalInformation2 = document.getElementById('generalInformation1');
-    const resultArticle3 = document.getElementById('resultArticle');
-    const generalInformation3 = document.getElementById('generalInformation');
+    const resultArticles = [
+        document.getElementById('resultArticle1'),
+        document.getElementById('resultArticle2'),
+        document.getElementById('resultArticle3')
+    ];
+    const generalInformations = [
+        document.getElementById('generalInformation1'),
+        document.getElementById('generalInformation2'),
+        document.getElementById('generalInformation3')
+    ];
     const bmiValueElement = document.getElementById('bmiValue');
     const bmiCategoryElement = document.getElementById('bmiCategory');
 
@@ -23,24 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const bmi = weight / (height * height);
         let category = '';
+        let index = -1;
 
         if (bmi < 18.50) {
             category = 'Kekurangan berat badan';
-            resultArticle1.style.display = 'block';
-            generalInformation1.style.display = 'block';
+            index = 0;
         } else if (bmi >= 18.50 && bmi <= 24.99) {
             category = 'Normal (ideal)';
-            resultArticle2.style.display = 'block';
-            generalInformation2.style.display = 'block';
+            index = 1;
         } else if (bmi >= 25 && bmi <= 29.99) {
             category = 'Kelebihan berat badan';
-            resultArticle3.style.display = 'block';
-            generalInformation3.style.display = 'block';
+            index = 2;
         } else {
             category = 'Kegemukan (Obesitas)';
-            resultArticle3.style.display = 'block';
-            generalInformation3.style.display = 'block';
+            index = 2;
         }
+
+        resultArticles.forEach((article, idx) => {
+            article.style.display = idx === index ? 'block' : 'none';
+        });
+
+        generalInformations.forEach((info, idx) => {
+            info.style.display = idx === index ? 'block' : 'none';
+        });
 
         bmiValueElement.textContent = bmi.toFixed(2);
         bmiCategoryElement.textContent = category;
